@@ -12,13 +12,17 @@
 </head>
 <body>
     <div  id="root">
-        <main class="container mt-5">
+        <main class="container w-50 mt-5">
             <ul class="list-group">
                 <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between">
                     {{task}}
                     <button @click="deletedTask(i)" type="button" class="btn-close" aria-label="Close"></button>
                 </li>
               </ul>
+              <div class="input-group mt-5">
+                <input v-model="newTask" type="text" class="form-control" placeholder="Cosa vorresti aggiungere.." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button @click="addTask" class="btn btn-outline-secondary" type="button" id="button-addon2">INSERISCI</button>
+              </div>
         </main>
     </div>
         
