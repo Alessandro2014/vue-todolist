@@ -14,9 +14,9 @@
     <div  id="root">
         <main class="container mt-5">
             <ul class="list-group">
-                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">
+                <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between">
                     {{task}}
-                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <button @click="deletedTask(i)" type="button" class="btn-close" aria-label="Close"></button>
                 </li>
               </ul>
         </main>

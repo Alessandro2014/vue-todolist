@@ -9,6 +9,8 @@ const root = new Vue({
         ], 
     },
     methods: {
-       
+       deletedTask(i){
+           this.tasks.splice(i, 1);
+       }
     },
 });
