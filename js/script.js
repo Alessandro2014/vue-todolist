@@ -16,7 +16,7 @@ const root = new Vue({
        },
        addTask() {
         if(this.newTask.trim()){
-            this.tasks.push(newTask);
+            this.tasks.push(this.newTask);
         }
         this.newTask = '';
        },
