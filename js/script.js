@@ -5,7 +5,7 @@ const root = new Vue({
         tasks:[
             'Fare le valigie',
             'Comprare pane',
-            'Abbeverare piante',
+            'Annaffiare piante',
             'Ordinare il dolce',
             'Lavare auto',
         ], 
