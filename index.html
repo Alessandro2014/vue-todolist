@@ -12,7 +12,8 @@
 <body>
     <div  id="root">
         <main class="mx-auto w-50 mt-5">
-            <ul class="list-group">
+            <p v-if="!tasks.length" class="text-center bg-danger py-2 my-3">Non ci sono promemoria da mostarre</p>
+            <ul class="list-group" >
                 <li v-for="(task, i) in tasks" class="bg-warning bg-gradient list-group-item d-flex justify-content-between">
                     {{task}}
                     <button @click="deletedTask(i)" type="button" class="btn-close" aria-label="Close"></button>
