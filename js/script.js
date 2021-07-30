@@ -3,6 +3,7 @@ const root = new Vue({
     data: {
         newTask:'',
         showInput: true,
+        searchTerm: '',
         tasks:[
             'Fare le valigie',
             'Comprare pane',
@@ -18,11 +19,16 @@ const root = new Vue({
        addTask() {
         if(this.newTask.trim()){
             this.tasks.push(this.newTask);
-        }
+            this.toggleInput();
+        } 
         this.newTask = '';
        },
        toggleInput(){
            this.showInput = !this.showInput;
+           this.newTask = '';
        },
+       showItem(task){
+
+       }
     }, 
 });
