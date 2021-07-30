@@ -2,6 +2,7 @@ const root = new Vue({
     el: '#root',
     data: {
         newTask:'',
+        showInput: true,
         tasks:[
             'Fare le valigie',
             'Comprare pane',
@@ -20,5 +21,8 @@ const root = new Vue({
         }
         this.newTask = '';
        },
-    },
+       toggleInput(){
+           this.showInput = !this.showInput;
+       },
+    }, 
 });
